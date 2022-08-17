@@ -65,6 +65,7 @@ namespace Guia4_NSB
             this.GenerarButton.TabIndex = 2;
             this.GenerarButton.Text = "Generar";
             this.GenerarButton.UseVisualStyleBackColor = true;
+            this.GenerarButton.Click += new System.EventHandler(this.GenerarButton_Click);
             // 
             // ClientesButton
             // 
