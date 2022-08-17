@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guia4_NSB.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,12 +21,11 @@ namespace Guia4_NSB
 
         private void GenerarButton_Click(object sender, EventArgs e)
         {
-            SqlConnection cnn = new SqlConnection("Server= LocalHost; Database = master; Integrated Security = True");
+            SqlConnection cnn = new SqlConnection("Server= LAPTOP-TN73JHLV\\SQLEXPRESS; Database = master; Integrated Security = yes");
             
             string createdb = "CREATE DATABASE DB_Avanzada";
 
-            string tCliente = "USE DB_Avanzada" +
-                "GO" +
+            string tCliente = "USE DB_Avanzada\n"+
                 "CREATE TABLE CLIENTES" +
                 "(" +
                 "id_Cliente int identity(1,1)," +
@@ -33,8 +33,7 @@ namespace Guia4_NSB
                 "CONSTRAINT pk_cliente primary key(id_Cliente)" +
                 ")";
 
-            string tPedido = "USE DB_Avanzada" 
-                + "GO" 
+            string tPedido = "USE DB_Avanzada\n" 
                 + "CREATE TABLE PEDIDOS" 
                 + "(" 
                 + "id_Pedido int identity(1,1)," 
@@ -63,6 +62,20 @@ namespace Guia4_NSB
 
                 throw;
             }
+        }
+
+        private void ClientesButton_Click(object sender, EventArgs e)
+        {
+            Form2 form1 = new Form2();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void PedidosButton_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+            this.Hide();
         }
     }
 }

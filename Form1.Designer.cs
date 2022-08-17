@@ -77,6 +77,7 @@ namespace Guia4_NSB
             this.ClientesButton.Text = "Clientes";
             this.ClientesButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ClientesButton.UseVisualStyleBackColor = true;
+            this.ClientesButton.Click += new System.EventHandler(this.ClientesButton_Click);
             // 
             // PedidosButton
             // 
@@ -88,6 +89,7 @@ namespace Guia4_NSB
             this.PedidosButton.Text = "Pedidos";
             this.PedidosButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.PedidosButton.UseVisualStyleBackColor = true;
+            this.PedidosButton.Click += new System.EventHandler(this.PedidosButton_Click);
             // 
             // Form1
             // 
