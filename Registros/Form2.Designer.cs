@@ -71,6 +71,7 @@ namespace Guia4_NSB.Registros
             this.btnIngresarC.TabIndex = 3;
             this.btnIngresarC.Text = "Ingresar";
             this.btnIngresarC.UseVisualStyleBackColor = true;
+            this.btnIngresarC.Click += new System.EventHandler(this.btnIngresarC_Click);
             // 
             // btnLimpiarC
             // 
@@ -80,6 +81,7 @@ namespace Guia4_NSB.Registros
             this.btnLimpiarC.TabIndex = 4;
             this.btnLimpiarC.Text = "Limpiar";
             this.btnLimpiarC.UseVisualStyleBackColor = true;
+            this.btnLimpiarC.Click += new System.EventHandler(this.btnLimpiarC_Click);
             // 
             // btnVolverC
             // 
@@ -89,6 +91,7 @@ namespace Guia4_NSB.Registros
             this.btnVolverC.TabIndex = 5;
             this.btnVolverC.Text = "Volver";
             this.btnVolverC.UseVisualStyleBackColor = true;
+            this.btnVolverC.Click += new System.EventHandler(this.btnVolverC_Click);
             // 
             // Form2
             // 
