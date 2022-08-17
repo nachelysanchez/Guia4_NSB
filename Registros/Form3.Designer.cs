@@ -107,6 +107,7 @@ namespace Guia4_NSB.Registros
             this.cbCliente.Name = "cbCliente";
             this.cbCliente.Size = new System.Drawing.Size(224, 24);
             this.cbCliente.TabIndex = 6;
+            this.cbCliente.SelectedIndexChanged += new System.EventHandler(this.cbCliente_SelectedIndexChanged);
             // 
             // nUDcant
             // 
@@ -130,6 +131,7 @@ namespace Guia4_NSB.Registros
             this.btnIngresarP.TabIndex = 9;
             this.btnIngresarP.Text = "Ingresar";
             this.btnIngresarP.UseVisualStyleBackColor = true;
+            this.btnIngresarP.Click += new System.EventHandler(this.btnIngresarP_Click);
             // 
             // btnLimpiarP
             // 
@@ -139,6 +141,7 @@ namespace Guia4_NSB.Registros
             this.btnLimpiarP.TabIndex = 10;
             this.btnLimpiarP.Text = "Limpiar";
             this.btnLimpiarP.UseVisualStyleBackColor = true;
+            this.btnLimpiarP.Click += new System.EventHandler(this.btnLimpiarP_Click);
             // 
             // btnVolverP
             // 
@@ -148,6 +151,7 @@ namespace Guia4_NSB.Registros
             this.btnVolverP.TabIndex = 11;
             this.btnVolverP.Text = "Volver";
             this.btnVolverP.UseVisualStyleBackColor = true;
+            this.btnVolverP.Click += new System.EventHandler(this.btnVolverP_Click);
             // 
             // Form3
             // 
@@ -168,6 +172,7 @@ namespace Guia4_NSB.Registros
             this.Controls.Add(this.label1);
             this.Name = "Form3";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nUDcant)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
