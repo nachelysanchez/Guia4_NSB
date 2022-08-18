@@ -75,7 +75,19 @@ namespace Guia4_NSB.Tarea_4
 
         private void rUsuarios_Load(object sender, EventArgs e)
         {
-            llenar();
+            if(Ciudadcombo.Items.Count > 0)
+            {
+                llenar();
+            }
+            else
+            {
+                MessageBox.Show("No hay ciudades registradas, favor registre una.", "OJO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Close();
+                return;
+            }
         }
 
         private void Ciudadcombo_SelectedIndexChanged(object sender, EventArgs e)
