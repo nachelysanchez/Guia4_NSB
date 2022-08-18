@@ -46,6 +46,7 @@ namespace Guia4_NSB.Registros
             this.label1.Size = new System.Drawing.Size(91, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Clientes";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -55,6 +56,7 @@ namespace Guia4_NSB.Registros
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
             // 
@@ -62,6 +64,7 @@ namespace Guia4_NSB.Registros
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(231, 22);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnIngresarC
             // 
@@ -106,6 +109,7 @@ namespace Guia4_NSB.Registros
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

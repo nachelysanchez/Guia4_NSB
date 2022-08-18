@@ -145,6 +145,7 @@ namespace Guia4_NSB
             this.CiudadesButton.Text = "Ciudades";
             this.CiudadesButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.CiudadesButton.UseVisualStyleBackColor = true;
+            this.CiudadesButton.Click += new System.EventHandler(this.CiudadesButton_Click);
             // 
             // UsuariosButton
             // 

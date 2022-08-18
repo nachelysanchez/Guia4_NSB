@@ -9,14 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Guia4_NSB.Registros
+namespace Guia4_NSB.Tarea_4
 {
-    public partial class Form2 : Form
+    public partial class rCiudades : Form
     {
         private SqlConnection conn;
         private SqlCommand insert1;
         private string sCn;
-        public Form2()
+        public rCiudades()
         {
             InitializeComponent();
             Conexion conexion = new Conexion();
@@ -31,24 +31,24 @@ namespace Guia4_NSB.Registros
             {
                 conn.Open();
                 string insert;
-                insert = "INSERT INTO CLIENTES VALUES ('" + textBox1.Text+"')";
+                insert = "INSERT INTO CIUDADES VALUES ('" + textBox1.Text + "')";
                 insert1 = new SqlCommand(insert, conn);
 
                 insert1.ExecuteNonQuery();
                 textBox1.Clear();
-                MessageBox.Show("Agregado exitosamente");
+                MessageBox.Show("Agregado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 conn.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Error: "+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
         }
 
         private void btnLimpiarC_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            textBox1.Text = "";
         }
 
         private void btnVolverC_Click(object sender, EventArgs e)
@@ -56,26 +56,6 @@ namespace Guia4_NSB.Registros
             Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -89,19 +89,21 @@ namespace Guia4_NSB
                 "(" +
                 "id_Usuario int identity(1,1)," +
                 "NombreUsuario varchar(40)," +
-                "user varchar(50)," +
+                "usuario varchar(50)," +
                 "contrasena varchar(100)," +
-                "activo bool," +
-                "id_Ciudad int" +
-                "CONSTRAINT pk_ciudad primary key(id_Ciudad)" +
+                "activo bit," +
+                "id_Ciudad int," +
+                "CONSTRAINT fk_ciudad foreign key(id_Ciudad) REFERENCES CIUDADES(id_Ciudad)," +
+                "CONSTRAINT pk_usuario primary key(id_Usuario)" +
                 ")";
 
             string tCiudad = "USE DB_Avanzada\n" +
                 "CREATE TABLE CIUDADES" +
                 "(" +
-                "id_Ciudad int identity(1,1)," +
+                "id_Ciudad int identity(1,1),\n" +
                 "NombreCiudad varchar(100)," +
-                ")";
+                "CONSTRAINT pk_ciudad PRIMARY KEY (id_Ciudad)" +
+                ");";
 
             SqlCommand cmd = new SqlCommand(tCiudad, cnn);
             SqlCommand cmd1 = new SqlCommand(tUsuario, cnn);
@@ -128,6 +130,13 @@ namespace Guia4_NSB
         {
             rUsuarios user = new rUsuarios();
             user.Show();
+            this.Hide();
+        }
+
+        private void CiudadesButton_Click(object sender, EventArgs e)
+        {
+            rCiudades ciudad = new rCiudades();
+            ciudad.Show();
             this.Hide();
         }
     }

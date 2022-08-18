@@ -36,7 +36,6 @@ namespace Guia4_NSB.Tarea_4
         }
         private void Limpiar()
         {
-            idtxt.Text = "";
             Nombrestxt.Text = "";
             usertxt.Text = "";
             passwordtxt.Text = "";
@@ -49,8 +48,13 @@ namespace Guia4_NSB.Tarea_4
         {
             try
             {
+                int valor = 0;
+                if (EstadoRadio.Checked == true)
+                {
+                    valor = 1;
+                }
                 cnn.Open();
-                string insert = $"INSERT INTO USUARIOS VALUES ({idtxt.Text}, '{Nombrestxt.Text}', '{usertxt.Text}', '{passwordtxt.Text}', {EstadoRadio.Checked}, {Ciudadcombo.Text})";
+                string insert = $"INSERT INTO USUARIOS VALUES ('{Nombrestxt.Text}', '{usertxt.Text}', '{passwordtxt.Text}', {valor}, {Ciudadcombo.Text})";
                 SqlCommand insert1 = new SqlCommand(insert, cnn);
                 insert1.ExecuteNonQuery();
                 Limpiar();
