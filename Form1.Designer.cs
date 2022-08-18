@@ -36,9 +36,10 @@ namespace Guia4_NSB
             this.PedidosButton = new System.Windows.Forms.Button();
             this.gTareaButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.CiudadesButton = new System.Windows.Forms.Button();
             this.UsuariosButton = new System.Windows.Forms.Button();
+            this.CiudadesButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cUsuariosButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -111,16 +112,41 @@ namespace Guia4_NSB
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cUsuariosButton);
             this.groupBox1.Controls.Add(this.UsuariosButton);
             this.groupBox1.Controls.Add(this.CiudadesButton);
             this.groupBox1.Controls.Add(this.gTareaButton);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(56, 307);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(370, 113);
+            this.groupBox1.Size = new System.Drawing.Size(370, 165);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tarea 4";
+            // 
+            // UsuariosButton
+            // 
+            this.UsuariosButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuariosButton.Location = new System.Drawing.Point(17, 62);
+            this.UsuariosButton.Name = "UsuariosButton";
+            this.UsuariosButton.Size = new System.Drawing.Size(97, 32);
+            this.UsuariosButton.TabIndex = 7;
+            this.UsuariosButton.Text = "Usuarios";
+            this.UsuariosButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.UsuariosButton.UseVisualStyleBackColor = true;
+            this.UsuariosButton.Click += new System.EventHandler(this.UsuariosButton_Click);
+            // 
+            // CiudadesButton
+            // 
+            this.CiudadesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CiudadesButton.Location = new System.Drawing.Point(242, 62);
+            this.CiudadesButton.Name = "CiudadesButton";
+            this.CiudadesButton.Size = new System.Drawing.Size(97, 32);
+            this.CiudadesButton.TabIndex = 6;
+            this.CiudadesButton.Text = "Ciudades";
+            this.CiudadesButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CiudadesButton.UseVisualStyleBackColor = true;
+            this.CiudadesButton.Click += new System.EventHandler(this.CiudadesButton_Click);
             // 
             // groupBox2
             // 
@@ -135,35 +161,22 @@ namespace Guia4_NSB
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Guía";
             // 
-            // CiudadesButton
+            // cUsuariosButton
             // 
-            this.CiudadesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CiudadesButton.Location = new System.Drawing.Point(242, 62);
-            this.CiudadesButton.Name = "CiudadesButton";
-            this.CiudadesButton.Size = new System.Drawing.Size(97, 32);
-            this.CiudadesButton.TabIndex = 6;
-            this.CiudadesButton.Text = "Ciudades";
-            this.CiudadesButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CiudadesButton.UseVisualStyleBackColor = true;
-            this.CiudadesButton.Click += new System.EventHandler(this.CiudadesButton_Click);
-            // 
-            // UsuariosButton
-            // 
-            this.UsuariosButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsuariosButton.Location = new System.Drawing.Point(17, 62);
-            this.UsuariosButton.Name = "UsuariosButton";
-            this.UsuariosButton.Size = new System.Drawing.Size(97, 32);
-            this.UsuariosButton.TabIndex = 7;
-            this.UsuariosButton.Text = "Usuarios";
-            this.UsuariosButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.UsuariosButton.UseVisualStyleBackColor = true;
-            this.UsuariosButton.Click += new System.EventHandler(this.UsuariosButton_Click);
+            this.cUsuariosButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cUsuariosButton.Location = new System.Drawing.Point(17, 109);
+            this.cUsuariosButton.Name = "cUsuariosButton";
+            this.cUsuariosButton.Size = new System.Drawing.Size(97, 50);
+            this.cUsuariosButton.TabIndex = 8;
+            this.cUsuariosButton.Text = "Consulta Usuarios";
+            this.cUsuariosButton.UseVisualStyleBackColor = true;
+            this.cUsuariosButton.Click += new System.EventHandler(this.cUsuariosButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 432);
+            this.ClientSize = new System.Drawing.Size(453, 503);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
@@ -189,6 +202,7 @@ namespace Guia4_NSB
         private System.Windows.Forms.Button UsuariosButton;
         private System.Windows.Forms.Button CiudadesButton;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button cUsuariosButton;
     }
 }
 

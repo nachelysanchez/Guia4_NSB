@@ -139,5 +139,12 @@ namespace Guia4_NSB
             ciudad.Show();
             this.Hide();
         }
+
+        private void cUsuariosButton_Click(object sender, EventArgs e)
+        {
+            cUsuarios user = new cUsuarios();
+            user.Show();
+            this.Hide();
+        }
     }
 }
