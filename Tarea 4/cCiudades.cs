@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Guia4_NSB.Tarea_4
 {
-    public partial class cUsuarios : Form
+    public partial class cCiudades : Form
     {
         private SqlConnection cnn;
         private SqlCommand insert;
         private string sCn;
         private SqlDataAdapter da;
         private SqlDataReader dr;
-        public cUsuarios()
+        public cCiudades()
         {
             InitializeComponent();
             Conexion con = new Conexion();
@@ -38,26 +38,26 @@ namespace Guia4_NSB.Tarea_4
                 {
                     using (cnn)
                     {
-                        string query = $"SELECT id_Usuario AS 'Id Usuario', NombreUsuario AS 'Nombres', usuario AS 'Nombre de Usuario', '' AS 'Contraseña', IIF(activo != 0, 'Si', 'No') AS 'Estado', c.NombreCiudad AS 'Ciudad' FROM USUARIOS AS u INNER JOIN CIUDADES AS c on c.id_Ciudad = u.id_Ciudad WHERE {comboFiltro.Text} like '%{filtrotxt.Text}%'";
+                        string query = $"SELECT id_Ciudad AS 'Id Ciudad', NombreCiudad AS 'Nombre' FROM CIUDADES WHERE {comboFiltro.Text} like '%{filtrotxt.Text}%'";
 
                         SqlCommand command = new SqlCommand(query, cnn);
                         SqlDataAdapter da = new SqlDataAdapter(command);
                         da.Fill(dt);
                     }
-                    usuariosdtg.DataSource = dt;
+                    ciudadesdtg.DataSource = dt;
 
                 }
                 else
                 {
                     using (cnn)
                     {
-                        string query = $"SELECT id_Usuario AS 'Id Usuario', NombreUsuario AS 'Nombres', usuario AS 'Nombre de Usuario', '' AS 'Contraseña', IIF(activo != 0, 'Si', 'No') AS 'Estado', c.NombreCiudad AS 'Ciudad' FROM USUARIOS AS u INNER JOIN CIUDADES AS c on c.id_Ciudad = u.id_Ciudad WHERE {comboFiltro.Text} = {filtrotxt.Text}";
+                        string query = $"SELECT id_Ciudad AS 'Id Ciudad', NombreCiudad AS 'Nombre' FROM CIUDADES WHERE {comboFiltro.Text} = {filtrotxt.Text}";
 
                         SqlCommand command = new SqlCommand(query, cnn);
                         SqlDataAdapter da = new SqlDataAdapter(command);
                         da.Fill(dt);
                     }
-                    usuariosdtg.DataSource = dt;
+                    ciudadesdtg.DataSource = dt;
 
                 }
             }
@@ -65,13 +65,13 @@ namespace Guia4_NSB.Tarea_4
             {
                 using (cnn)
                 {
-                    string query = $"SELECT id_Usuario AS 'Id Usuario', NombreUsuario AS 'Nombres', usuario AS 'Nombre de Usuario', '' AS 'Contraseña', IIF(activo != 0, 'Si', 'No') AS 'Estado', c.NombreCiudad AS 'Ciudad' FROM USUARIOS AS u INNER JOIN CIUDADES AS c on c.id_Ciudad = u.id_Ciudad ";
+                    string query = $"SELECT id_Ciudad AS 'Id Ciudad', NombreCiudad AS 'Nombre' FROM CIUDADES";
 
                     SqlCommand command = new SqlCommand(query, cnn);
                     SqlDataAdapter da = new SqlDataAdapter(command);
                     da.Fill(dt);
                 }
-                usuariosdtg.DataSource = dt;
+                ciudadesdtg.DataSource = dt;
             }
         }
     }

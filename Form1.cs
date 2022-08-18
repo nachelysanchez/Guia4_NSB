@@ -146,5 +146,12 @@ namespace Guia4_NSB
             user.Show();
             this.Hide();
         }
+
+        private void cCiudadesButton_Click(object sender, EventArgs e)
+        {
+            cCiudades ciudad = new cCiudades();
+            ciudad.Show();
+            this.Hide();
+        }
     }
 }

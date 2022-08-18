@@ -75,11 +75,8 @@ namespace Guia4_NSB.Tarea_4
 
         private void rUsuarios_Load(object sender, EventArgs e)
         {
-            if(Ciudadcombo.Items.Count > 0)
-            {
-                llenar();
-            }
-            else
+            llenar();
+            if(Ciudadcombo.Items.Count < 0)
             {
                 MessageBox.Show("No hay ciudades registradas, favor registre una.", "OJO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 

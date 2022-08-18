@@ -32,12 +32,6 @@ namespace Guia4_NSB.Tarea_4
             this.filtrotxt = new System.Windows.Forms.TextBox();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.usuariosdtg = new System.Windows.Forms.DataGridView();
-            this.Idcol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombrescol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ciudadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.comboFiltro = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,67 +58,12 @@ namespace Guia4_NSB.Tarea_4
             // usuariosdtg
             // 
             this.usuariosdtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usuariosdtg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Idcol,
-            this.Nombrescol,
-            this.userCol,
-            this.passCol,
-            this.estadoCol,
-            this.ciudadCol});
             this.usuariosdtg.Location = new System.Drawing.Point(25, 87);
             this.usuariosdtg.Name = "usuariosdtg";
             this.usuariosdtg.RowHeadersWidth = 51;
             this.usuariosdtg.RowTemplate.Height = 24;
             this.usuariosdtg.Size = new System.Drawing.Size(784, 272);
             this.usuariosdtg.TabIndex = 3;
-            // 
-            // Idcol
-            // 
-            this.Idcol.HeaderText = "Id Usuario";
-            this.Idcol.MinimumWidth = 6;
-            this.Idcol.Name = "Idcol";
-            this.Idcol.ReadOnly = true;
-            this.Idcol.Width = 125;
-            // 
-            // Nombrescol
-            // 
-            this.Nombrescol.HeaderText = "Nombres";
-            this.Nombrescol.MinimumWidth = 6;
-            this.Nombrescol.Name = "Nombrescol";
-            this.Nombrescol.ReadOnly = true;
-            this.Nombrescol.Width = 125;
-            // 
-            // userCol
-            // 
-            this.userCol.HeaderText = "Nombre de Usuario";
-            this.userCol.MinimumWidth = 6;
-            this.userCol.Name = "userCol";
-            this.userCol.ReadOnly = true;
-            this.userCol.Width = 125;
-            // 
-            // passCol
-            // 
-            this.passCol.HeaderText = "Contraseña";
-            this.passCol.MinimumWidth = 6;
-            this.passCol.Name = "passCol";
-            this.passCol.ReadOnly = true;
-            this.passCol.Width = 125;
-            // 
-            // estadoCol
-            // 
-            this.estadoCol.HeaderText = "Estado";
-            this.estadoCol.MinimumWidth = 6;
-            this.estadoCol.Name = "estadoCol";
-            this.estadoCol.ReadOnly = true;
-            this.estadoCol.Width = 125;
-            // 
-            // ciudadCol
-            // 
-            this.ciudadCol.HeaderText = "Ciudad";
-            this.ciudadCol.MinimumWidth = 6;
-            this.ciudadCol.Name = "ciudadCol";
-            this.ciudadCol.ReadOnly = true;
-            this.ciudadCol.Width = 125;
             // 
             // label1
             // 
@@ -139,8 +78,8 @@ namespace Guia4_NSB.Tarea_4
             // 
             this.comboFiltro.FormattingEnabled = true;
             this.comboFiltro.Items.AddRange(new object[] {
-            "Id Usuario",
-            "Nombres"});
+            "Id_Usuario",
+            "NombreUsuario"});
             this.comboFiltro.Location = new System.Drawing.Point(25, 43);
             this.comboFiltro.Name = "comboFiltro";
             this.comboFiltro.Size = new System.Drawing.Size(121, 24);
@@ -178,12 +117,6 @@ namespace Guia4_NSB.Tarea_4
         private System.Windows.Forms.TextBox filtrotxt;
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.DataGridView usuariosdtg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Idcol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombrescol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ciudadCol;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboFiltro;
         private System.Windows.Forms.Label label2;

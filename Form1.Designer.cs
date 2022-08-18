@@ -40,6 +40,7 @@ namespace Guia4_NSB
             this.CiudadesButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cUsuariosButton = new System.Windows.Forms.Button();
+            this.cCiudadesButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +113,7 @@ namespace Guia4_NSB
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cCiudadesButton);
             this.groupBox1.Controls.Add(this.cUsuariosButton);
             this.groupBox1.Controls.Add(this.UsuariosButton);
             this.groupBox1.Controls.Add(this.CiudadesButton);
@@ -172,6 +174,17 @@ namespace Guia4_NSB
             this.cUsuariosButton.UseVisualStyleBackColor = true;
             this.cUsuariosButton.Click += new System.EventHandler(this.cUsuariosButton_Click);
             // 
+            // cCiudadesButton
+            // 
+            this.cCiudadesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cCiudadesButton.Location = new System.Drawing.Point(242, 109);
+            this.cCiudadesButton.Name = "cCiudadesButton";
+            this.cCiudadesButton.Size = new System.Drawing.Size(97, 50);
+            this.cCiudadesButton.TabIndex = 9;
+            this.cCiudadesButton.Text = "Consulta Ciudades";
+            this.cCiudadesButton.UseVisualStyleBackColor = true;
+            this.cCiudadesButton.Click += new System.EventHandler(this.cCiudadesButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -203,6 +216,7 @@ namespace Guia4_NSB
         private System.Windows.Forms.Button CiudadesButton;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button cUsuariosButton;
+        private System.Windows.Forms.Button cCiudadesButton;
     }
 }
 
